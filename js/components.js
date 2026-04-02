@@ -1,15 +1,6 @@
 /* APP Merchant Services — Shared Components */
 
-const LOGO_SVG = `<svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="34" height="34" rx="8" fill="rgba(0,112,255,0.12)"/>
-  <circle cx="8" cy="11" r="2.5" stroke="#0070ff" stroke-width="1.5"/>
-  <circle cx="8" cy="23" r="2.5" stroke="#0070ff" stroke-width="1.5"/>
-  <circle cx="26" cy="11" r="2.5" stroke="#0070ff" stroke-width="1.5"/>
-  <circle cx="26" cy="23" r="2.5" stroke="#0070ff" stroke-width="1.5"/>
-  <line x1="10.5" y1="11" x2="23.5" y2="11" stroke="#0070ff" stroke-width="1.5"/>
-  <line x1="10.5" y1="23" x2="23.5" y2="23" stroke="#0070ff" stroke-width="1.5"/>
-  <line x1="17" y1="11" x2="17" y2="23" stroke="#0070ff" stroke-width="1.5"/>
-</svg>`;
+const LOGO_SVG = `<img src="assets/app_logo.png" alt="APP Merchant Services" style="width:38px;height:38px;border-radius:8px;"/>`;
 
 function injectNav(activePage) {
   const pages = [
