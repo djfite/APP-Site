@@ -1,6 +1,6 @@
 /* APP Merchant Services — Shared Components */
 
-const LOGO_SVG = `<img src="assets/app_logo.png" alt="APP Merchant Services" style="width:38px;height:38px;border-radius:8px;"/>`;
+const LOGO_SVG = `<img src="/assets/app_logo.png" alt="APP Merchant Services" style="width:38px;height:38px;border-radius:8px;"/>`;
 
 function injectNav(activePage) {
   const pages = [
