@@ -316,3 +316,53 @@ ul { list-style: none; }
 /* MT32 */
 .mt32 { margin-top: 32px; }
 .mb0 { margin-bottom: 0; }
+/* SERVICES PAGE */
+.servicesList { display: flex; flex-direction: column; gap: 32px; max-width: 860px; margin: 0 auto; }
+.serviceItem { display: flex; gap: 28px; background: var(--bg3); border: 1px solid var(--border); border-radius: 16px; padding: 32px; transition: border-color var(--ease); }
+.serviceItem:hover { border-color: var(--borderB); }
+.serviceIcon { font-size: 36px; flex-shrink: 0; width: 60px; text-align: center; padding-top: 4px; }
+.serviceBody { flex: 1; }
+.serviceTitle { font-family: var(--fd); font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+.serviceDesc { font-size: 15px; color: var(--text2); line-height: 1.7; margin-bottom: 16px; }
+.serviceTags { display: flex; flex-wrap: wrap; gap: 8px; }
+.sTag { font-size: 12px; font-weight: 600; color: var(--blueL); background: var(--blueSub); border: 1px solid var(--borderB); border-radius: 100px; padding: 4px 12px; letter-spacing: .04em; }
+@media (max-width: 600px) { .serviceItem { flex-direction: column; gap: 16px; } .serviceIcon { width: auto; font-size: 28px; } }
+
+/* FAQ PAGE */
+.faqWrap { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px; }
+.faqGroup { display: flex; flex-direction: column; gap: 0; }
+.faqGroupTitle { font-family: var(--fd); font-size: 18px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.faqItem { border-bottom: 1px solid var(--border); }
+.faqQ { width: 100%; background: none; border: none; text-align: left; padding: 20px 40px 20px 0; font-size: 16px; font-weight: 600; color: var(--text1); cursor: pointer; position: relative; transition: color var(--ease); line-height: 1.5; }
+.faqQ::after { content: '+'; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 22px; color: var(--blue); font-weight: 300; transition: transform .3s ease; }
+.faqItem.open .faqQ::after { transform: translateY(-50%) rotate(45deg); }
+.faqQ:hover { color: var(--blue); }
+.faqA { max-height: 0; overflow: hidden; transition: max-height .35s ease, padding .35s ease; }
+.faqItem.open .faqA { max-height: 400px; padding-bottom: 20px; }
+.faqA p { font-size: 15px; color: var(--text2); line-height: 1.75; }
+.faqA a { color: var(--blueL); }
+.faqA a:hover { color: var(--white); }
+.mt64 { margin-top: 64px; }
+
+/* CONTACT PAGE */
+.contactWrap { display: grid; grid-template-columns: 1fr 1.6fr; gap: 64px; align-items: start; }
+.contactInfo { display: flex; flex-direction: column; gap: 32px; }
+.contactCard { background: var(--bg3); border: 1px solid var(--border); border-radius: 16px; padding: 28px; text-align: center; }
+.contactDetail { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text2); margin-bottom: 12px; }
+.contactDetail svg { width: 16px; height: 16px; color: var(--blue); flex-shrink: 0; }
+.contactDetail a { color: var(--text2); transition: color var(--ease); }
+.contactDetail a:hover { color: var(--white); }
+.contactForm { background: var(--bg3); border: 1px solid var(--border); border-radius: 16px; padding: 32px; }
+@media (max-width: 900px) { .contactWrap { grid-template-columns: 1fr; gap: 40px; } }
+
+/* BREADCRUMB */
+.breadcrumb { font-size: 13px; color: var(--text3); margin-bottom: 16px; }
+.breadcrumb a { color: var(--text3); transition: color var(--ease); }
+.breadcrumb a:hover { color: var(--blueL); }
+.breadcrumb .sep { margin: 0 6px; }
+.breadcrumb .cur { color: var(--text2); }
+
+/* UTILITIES */
+.bgAlt { background: var(--bg2); }
+.mt32 { margin-top: 32px; }
+.mb0 { margin-bottom: 0; }
