@@ -1,6 +1,6 @@
 /* APP Merchant Services — Shared Components */
 
-const LOGO_SVG = `<img src="/assets/app_logo.png" alt="APP Merchant Services" style="width:38px;height:38px;border-radius:8px;"/>`;
+const LOGO_SVG = `<img src="/assets/app_logo.png" alt="APP Merchant Services" style="height:44px;width:auto;border-radius:6px;"/>`;
 
 function injectNav(activePage) {
   const pages = [
@@ -22,7 +22,6 @@ function injectNav(activePage) {
       <div class="navIn">
         <a href="index.html" class="navLogo">
           ${LOGO_SVG}
-          <span class="navLogoText">A<span>P</span>P</span>
         </a>
         <div class="navLinks" id="navLinks">${links}</div>
         <button class="navBurger" id="navBurger" aria-label="Menu">
