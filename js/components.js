@@ -1,14 +1,16 @@
 /* APP Merchant Services — Shared Components */
 
-const LOGO_SVG = `<img src="/assets/app_logo.png" alt="APP Merchant Services" style="height:44px;width:auto;border-radius:6px;"/>`;
+const LOGO_IMG = `<img src="/assets/app_logo.png" alt="APP Merchant Services logo" style="height:44px;width:auto;border-radius:6px;display:block;"/>`;
 
 function injectNav(activePage) {
   const pages = [
-    { href: 'index.html',       label: 'Home' },
-    { href: 'restaurant.html',  label: 'Restaurants' },
-    { href: 'salon.html',       label: 'Salons' },
-    { href: 'dry-cleaner.html', label: 'Dry Cleaners' },
-    { href: 'contact.html',     label: 'Get a Free Quote', cta: true },
+    { href: '/index.html',        label: 'Home' },
+    { href: '/restaurant.html',   label: 'Restaurants' },
+    { href: '/salon.html',        label: 'Salons' },
+    { href: '/dry-cleaner.html',  label: 'Dry Cleaners' },
+    { href: '/services.html',     label: 'More Services' },
+    { href: '/faq.html',          label: 'FAQ' },
+    { href: '/contact.html',      label: 'Get a Free Quote', cta: true },
   ];
 
   const links = pages.map(p => {
@@ -20,9 +22,7 @@ function injectNav(activePage) {
   document.body.insertAdjacentHTML('afterbegin', `
     <nav class="nav" id="mainNav">
       <div class="navIn">
-        <a href="index.html" class="navLogo">
-          ${LOGO_SVG}
-        </a>
+        <a href="/index.html" class="navLogo">${LOGO_IMG}</a>
         <div class="navLinks" id="navLinks">${links}</div>
         <button class="navBurger" id="navBurger" aria-label="Menu">
           <span></span><span></span><span></span>
@@ -46,24 +46,25 @@ function injectFooter() {
       <div class="footerIn">
         <div class="footerTop">
           <div class="footerBrand">
-            <a href="index.html" class="navLogo">${LOGO_SVG}</a>
+            <a href="/index.html" class="navLogo">${LOGO_IMG}</a>
             <p>Local payment processing and POS solutions for restaurants, salons, and dry cleaners in the Palm Coast area. Powered by bluu™.</p>
           </div>
           <div class="footerCol">
-            <h5>Solutions</h5>
+            <h5>POS Solutions</h5>
             <ul>
-              <li><a href="restaurant.html">Restaurant POS</a></li>
-              <li><a href="salon.html">Salon &amp; Spa POS</a></li>
-              <li><a href="dry-cleaner.html">Dry Cleaner POS</a></li>
-              <li><a href="index.html#calculator">Savings Calculator</a></li>
+              <li><a href="/restaurant.html">Restaurant POS</a></li>
+              <li><a href="/salon.html">Salon &amp; Spa POS</a></li>
+              <li><a href="/dry-cleaner.html">Dry Cleaner POS</a></li>
+              <li><a href="/index.html#calculator">Savings Calculator</a></li>
             </ul>
           </div>
           <div class="footerCol">
             <h5>Company</h5>
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-              <li><a href="contact.html">Free Quote</a></li>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/services.html">More Services</a></li>
+              <li><a href="/faq.html">FAQ</a></li>
+              <li><a href="/contact.html">Contact Us</a></li>
               <li><a href="https://www.ebluu.com" target="_blank" rel="noopener">About bluu™</a></li>
             </ul>
           </div>
