@@ -46,7 +46,7 @@ function injectFooter() {
       <div class="footerIn">
         <div class="footerTop">
           <div class="footerBrand">
-            <a href="index.html" class="navLogo">${LOGO_SVG}<span class="navLogoText">A<span>P</span>P</span></a>
+            <a href="index.html" class="navLogo">${LOGO_SVG}</a>
             <p>Local payment processing and POS solutions for restaurants, salons, and dry cleaners in the Palm Coast area. Powered by bluu™.</p>
           </div>
           <div class="footerCol">
