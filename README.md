@@ -10,7 +10,7 @@ restaurant.html      Restaurant POS
 salon.html           Salon POS
 dry-cleaner.html     Dry Cleaner POS
 contact.html         Contact & Quote
-css/styles.css       All shared styles
+css/styles-v2.css       All shared styles
 js/components-v2.js     Nav + footer injection
 js/calculator.js     Savings calculator
 assets/              Images, logo
