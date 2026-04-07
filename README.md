@@ -11,7 +11,7 @@ salon.html           Salon POS
 dry-cleaner.html     Dry Cleaner POS
 contact.html         Contact & Quote
 css/styles-v2.css       All shared styles
-js/components-v3.js     Nav + footer injection
+js/components-v4.js     Nav + footer injection
 js/calculator.js     Savings calculator
 assets/              Images, logo
 
@@ -27,7 +27,7 @@ Then: Hostinger -> Git -> connect repo -> set branch to main -> auto-pull on pus
 
 ## Before Going Live
 
-- Replace (000) 000-0000 with your real phone in contact.html and components-v3.js
+- Replace (000) 000-0000 with your real phone in contact.html and components-v4.js
 - Replace info@adpro.com with your real email
 - Swap the contact form in contact.html with your Jotform embed code
 - Update calculator rates in calculator.js when you have actual bluu rates
