@@ -18,7 +18,17 @@ function injectNav(activePage) {
     const cls = p.cta ? ' navCta' : '';
     return `<a href="${p.href}" class="${(active + cls).trim()}">${p.label}</a>`;
   }).join('');
-
+// Q2 Promo Banner
+if (!sessionStorage.getItem('promoBannerClosed')) {
+  document.body.insertAdjacentHTML('afterbegin', `
+    <div id="promoBanner" style="background:linear-gradient(90deg,#0a1628 0%,#0070ff22 50%,#0a1628 100%);border-bottom:1px solid rgba(0,112,255,0.3);padding:8px 24px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;text-align:center;position:relative;z-index:1002">
+      <span style="font-size:13px;color:var(--text2)">🔥 <strong style="color:#fff">Q2 Limited Offer:</strong> Complete POS Bundle — <strong style="color:#0070ff">$35/month</strong> · Terminal + Printer + Pin Pad · Restaurants &amp; Salons Only</span>
+      <span style="font-size:12px;color:#ff6b35;font-weight:600">⚡ Ends June 30 · Only 200 Units</span>
+      <a href="/contact.html" style="background:#0070ff;color:#fff;padding:5px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;white-space:nowrap">Claim Yours →</a>
+      <button onclick="document.getElementById('promoBanner').style.display='none';sessionStorage.setItem('promoBannerClosed','1')" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--text3);font-size:18px;cursor:pointer;line-height:1;padding:4px">✕</button>
+    </div>
+  `);
+}
   document.body.insertAdjacentHTML('afterbegin', `
     <nav class="nav" id="mainNav">
       <div class="navIn">
