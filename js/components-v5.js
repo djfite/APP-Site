@@ -92,5 +92,10 @@ function initFadeIn() {
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.fi').forEach(el => obs.observe(el));
 }
-
+// Ellie AI Agent - Jotform Chatbot
+(function() {
+  var script = document.createElement('script');
+  script.src = 'https://cdn.jotfor.ms/agent/embedjs/019a849dc7117bdb8560faf980b1c548959d/embed.js';
+  document.body.appendChild(script);
+})();
 document.addEventListener('DOMContentLoaded', initFadeIn);
