@@ -80,6 +80,7 @@ function injectFooter() {
         </div>
         <div class="footerBottom">
           <p class="footerLegal">© ${year} APP Merchant Services. Payment processing provided by <a href="https://www.ebluu.com" target="_blank" rel="noopener">bluu™</a>, a registered ISO/MSP of Merrick Bank, South Jordan, UT.</p>
+          <p style="font-size:12px;color:var(--text3);margin-top:8px"><a href="/privacy.html" style="color:var(--text3)">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms.html" style="color:var(--text3)">Terms &amp; Conditions</a></p>
           <p style="font-size:12px;color:var(--text3);">Powered by <a href="https://www.ebluu.com" target="_blank" rel="noopener" style="color:var(--blueL);">bluu™</a></p>
         </div>
       </div>
