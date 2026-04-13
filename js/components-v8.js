@@ -19,7 +19,7 @@ function injectNav(activePage) {
     return `<a href="${p.href}" class="${(active + cls).trim()}">${p.label}</a>`;
   }).join('');
 // Q2 Promo Banner
-document.addEventListener('DOMContentLoaded', function() {
+setTimeout(function() {
   if (!sessionStorage.getItem('promoBannerClosed')) {
     var nav = document.getElementById('mainNav');
     if (nav) {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
       `);
     }
   }
-});
+}, 0);
   document.body.insertAdjacentHTML('afterbegin', `
     <nav class="nav" id="mainNav">
       <div class="navIn">
