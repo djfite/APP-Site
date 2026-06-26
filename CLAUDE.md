@@ -4,8 +4,8 @@
 Static HTML/CSS/JS website for APP Merchant Services, a local payment processing and POS solutions business in Palm Coast, FL. Sales rep for bluu™ powered by Merrick Bank. Target verticals: restaurants, salons, dry cleaners.
 
 ## Live Site
-- **Current domain:** https://adproproductions.com
-- **Future domain:** https://appmerchantservices.com (purchased, not yet switched)
+- **Current domain:** https://appmerchantservices.com
+- **Domain migration completed:** 2026-06-26 (migrated from adproproductions.com)
 - **GitHub repo:** github.com/djfite/APP-Site (public)
 
 ## Tech Stack
@@ -25,11 +25,11 @@ Static HTML/CSS/JS website for APP Merchant Services, a local payment processing
 ```
 
 ## CRITICAL: Cache Busting
-Cloudflare aggressively caches JS and CSS files. When making changes to JS or CSS files, you MUST rename the file to force a cache bust. Example: components-v11.js → components-v12.js. Then update ALL HTML files to reference the new filename using find & replace.
+Cloudflare aggressively caches JS and CSS files. When making changes to JS or CSS files, you MUST rename the file to force a cache bust. Example: components-v12.js → components-v13.js. Then update ALL HTML files to reference the new filename using find & replace.
 
 **Current file versions:**
 - CSS: styles-v2.css
-- Components JS: components-v11.js (contains nav, footer, Ellie AI agent injection)
+- Components JS: components-v12.js (contains nav, footer, Ellie AI agent injection)
 - Calculator JS: calculator.js (savings calculator — do not modify unless asked)
 
 ## File Structure
@@ -45,7 +45,7 @@ APP-SITE/
 ├── css/
 │   └── styles-v2.css
 ├── js/
-│   ├── components-v10.js (nav + footer injection + Ellie AI agent)
+│   ├── components-v12.js (nav + footer injection + Ellie AI agent)
 │   └── calculator.js
 ├── index.html
 ├── restaurant.html
@@ -59,17 +59,17 @@ APP-SITE/
 └── sitemap.xml
 ```
 
-## Shared Components (components-v10.js)
+## Shared Components (components-v12.js)
 - **Nav** — injected via `injectNav(activePage)` at bottom of each HTML file
 - **Footer** — injected via `injectFooter()` at bottom of each HTML file
 - **Ellie AI Agent** — Jotform chatbot injected on all pages (agent ID: 019a849dc7117bdb8560faf980b1c548959d)
-- Any change to nav or footer must be made in components-v10.js, NOT in individual HTML files
+- Any change to nav or footer must be made in components-v12.js, NOT in individual HTML files
 - After any change to components JS, rename the file and update all HTML references
 
 ## HTML Page Structure
 Each page follows this pattern at the bottom:
 ```html
-<script src="/js/components-v10.js"></script>
+<script src="/js/components-v12.js"></script>
 <script src="/js/calculator.js"></script> <!-- index.html only -->
 <script>
 injectNav('/pagename.html');
@@ -103,7 +103,7 @@ Q2 2026 bluu Edge POS Bundle:
 
 ## Contact Info
 - Phone: (386) 259-0649
-- Email: derek@adproproductions.com
+- Email: derek@appmerchantservices.com
 - Location: Palm Coast, FL
 - Hours: Mon-Fri 9am-5pm ET
 - Jotform contact form ID: 243268921130048

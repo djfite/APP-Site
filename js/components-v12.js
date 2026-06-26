@@ -72,7 +72,7 @@ function injectFooter() {
             <h5>Contact</h5>
             <ul>
               <li><a href="tel:3862590649">📞 386-259-0649</a></li>
-              <li><a href="mailto:derek@adproproductions.com">✉️ derek@adproproductions.com</a></li>
+              <li><a href="mailto:derek@appmerchantservices.com">✉️ derek@appmerchantservices.com</a></li>
               <li style="color:var(--text3);font-size:13px;">Palm Coast, FL</li>
               <li style="color:var(--text3);font-size:13px;">Mon–Fri 9am–5pm ET</li>
             </ul>
