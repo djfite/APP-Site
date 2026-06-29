@@ -366,3 +366,111 @@ ul { list-style: none; }
 .bgAlt { background: var(--bg2); }
 .mt32 { margin-top: 32px; }
 .mb0 { margin-bottom: 0; }
+
+/* ================================================
+   PHARMACY-FIRST HOMEPAGE
+   ================================================ */
+
+/* 1. HERO */
+.phHero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
+.phHeroBg { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: 0; }
+.phHeroVeil { position: absolute; inset: 0; z-index: 1; background:
+    linear-gradient(100deg, rgba(7,10,18,0.94) 0%, rgba(7,10,18,0.86) 38%, rgba(7,10,18,0.72) 100%); }
+.phHeroVeil::after { content: ''; position: absolute; inset: 0; background:
+    radial-gradient(ellipse 60% 50% at 18% 40%, rgba(0,112,255,0.12), transparent 70%); }
+.phHeroInner { position: relative; z-index: 2; max-width: var(--max); margin: 0 auto; width: 100%; padding: 0 24px; }
+.phHeroCopy { max-width: 760px; width: 55%; padding: 160px 0 120px; }
+.phEyebrow { display: block; font-family: var(--fb); font-size: 13px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--blue); margin-bottom: 26px; }
+.phHeroH1 { font-family: var(--fd); font-size: clamp(46px,6.4vw,82px); font-weight: 700; line-height: 0.98; letter-spacing: -0.01em; color: var(--white); margin-bottom: 28px; }
+.phHeroH1 .acc { color: var(--blue); }
+.phHeroSub { font-size: 19px; line-height: 1.7; color: rgba(240,244,255,.82); max-width: 540px; margin-bottom: 38px; }
+.phHeroActions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 30px; }
+.phHeroActions .btnP { padding: 15px 30px; font-size: 16px; }
+.phHeroActions .btnS { padding: 15px 30px; font-size: 16px; }
+.phHeroTrust { font-size: 13px; letter-spacing: .03em; color: var(--text2); }
+@media (max-width: 980px) { .phHeroCopy { width: 100%; max-width: 640px; } }
+@media (max-width: 768px) { .phHeroCopy { padding: 130px 0 90px; } .phHeroSub { font-size: 17px; } }
+
+/* 2. PAIN POINTS */
+.phPain { background: var(--bg); }
+.phPain .label { text-align: left; margin-bottom: 40px; }
+.phPainRow { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; margin-bottom: 64px; }
+.phQuote { position: relative; border-left: 3px solid var(--blue); padding: 6px 0 6px 26px; margin: 0; font-family: var(--fd); font-size: clamp(20px,2vw,25px); font-weight: 600; line-height: 1.28; color: var(--white); }
+.phQuote::before { content: '\201C'; position: absolute; left: 18px; top: -14px; font-size: 52px; line-height: 1; color: rgba(0,112,255,.22); font-family: Georgia, serif; pointer-events: none; }
+.phPainClose { max-width: 760px; margin: 0 auto; text-align: center; font-size: clamp(20px,2.4vw,28px); line-height: 1.5; font-weight: 500; color: var(--text2); }
+.phPainClose .acc { color: var(--white); }
+@media (max-width: 820px) { .phPainRow { grid-template-columns: 1fr; gap: 34px; } }
+
+/* 3. WHO WE SERVE */
+.phServe { display: grid; grid-template-columns: 1fr 1fr; background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.phServeCopy { display: flex; align-items: center; padding: 104px 64px 104px 0; }
+.phServeCopyInner { max-width: 560px; margin-left: auto; padding: 0 24px; }
+.phServe .h2 { margin-bottom: 40px; }
+.phServeList { display: flex; flex-direction: column; gap: 32px; }
+.phServeItem { padding-left: 2px; }
+.phServeName { font-family: var(--fd); font-size: 21px; font-weight: 700; color: var(--white); margin-bottom: 8px; display: flex; align-items: baseline; gap: 12px; }
+.phArrow { color: var(--blue); font-weight: 700; }
+.phServeItem p { font-size: 15px; line-height: 1.7; color: var(--text2); padding-left: 30px; }
+.phServeImg { background-size: cover; background-position: center; min-height: 520px; }
+@media (max-width: 900px) {
+  .phServe { grid-template-columns: 1fr; }
+  .phServeCopy { padding: 72px 0; }
+  .phServeCopyInner { margin: 0 auto; }
+  .phServeImg { min-height: 360px; order: -1; }
+}
+
+/* 4. WHY US — BLUE BAND */
+.phWhy { background: var(--blue); padding: 96px 24px; position: relative; overflow: hidden; }
+.phWhy::before { content: ''; position: absolute; top: -120px; right: -80px; width: 480px; height: 480px; background: radial-gradient(circle, rgba(255,255,255,.10), transparent 65%); pointer-events: none; }
+.phWhyHead { margin-bottom: 56px; }
+.phWhyKicker { display: block; font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.7); margin-bottom: 14px; }
+.phWhyH2 { font-family: var(--fd); font-size: clamp(34px,4.4vw,54px); font-weight: 700; line-height: 1.05; color: var(--white); }
+.phWhyGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.16); border-radius: 16px; overflow: hidden; }
+.phWhyItem { background: var(--blue); padding: 40px 42px; }
+.phWhyItem h3 { font-family: var(--fd); font-size: 23px; font-weight: 700; color: var(--white); margin-bottom: 12px; }
+.phWhyItem p { font-size: 15px; line-height: 1.7; color: rgba(255,255,255,.88); }
+@media (max-width: 760px) { .phWhyGrid { grid-template-columns: 1fr; } .phWhyItem { padding: 32px 28px; } }
+
+/* 5. HOW IT WORKS */
+.phSteps { background: var(--bg); }
+.phStepsHead { margin-bottom: 56px; }
+.phStepsRow { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; }
+.phStep { position: relative; padding: 0 32px; }
+.phStep:first-child { padding-left: 0; }
+.phStep:not(:first-child)::before { content: ''; position: absolute; left: 0; top: 14px; bottom: 0; width: 1px; background: var(--border); }
+.phStepNum { font-family: var(--fd); font-size: 56px; font-weight: 700; line-height: 1; color: var(--blue); margin-bottom: 20px; letter-spacing: -.02em; }
+.phStepTitle { font-family: var(--fd); font-size: 19px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+.phStep p { font-size: 14px; line-height: 1.65; color: var(--text2); }
+@media (max-width: 860px) { .phStepsRow { grid-template-columns: 1fr 1fr; gap: 40px 0; } .phStep { padding: 0 28px; } .phStep:nth-child(odd) { padding-left: 0; } .phStep:nth-child(odd)::before { display: none; } }
+@media (max-width: 480px) { .phStepsRow { grid-template-columns: 1fr; gap: 36px; } .phStep, .phStep:first-child { padding: 0 0 0 24px; } .phStep::before { display: block !important; left: 0; top: 6px; } }
+
+/* 6. PRE-QUALIFICATION FORM */
+.phQualify { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); position: relative; }
+.phQualify::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 50% 60% at 50% 0%, rgba(0,112,255,.08), transparent 70%); pointer-events: none; }
+.phQualifyInner { position: relative; text-align: center; max-width: 760px; }
+.phQualify .label { text-align: center; }
+.phFormShell { margin-top: 12px; min-height: 320px; background: var(--bg3); border: 1px solid var(--border); border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; color: var(--text2); font-size: 15px; position: relative; overflow: hidden; }
+.phFormShell::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--blue), var(--blueL), transparent); }
+.phFormPulse { width: 38px; height: 38px; border-radius: 50%; border: 3px solid rgba(0,112,255,.2); border-top-color: var(--blue); animation: phSpin 0.9s linear infinite; }
+@keyframes phSpin { to { transform: rotate(360deg); } }
+
+/* 7. SECONDARY VERTICALS */
+.phSecondary { background: var(--bg); }
+.phSecondaryHead { max-width: 640px; margin-bottom: 36px; }
+.phSecondaryH2 { font-family: var(--fd); font-size: clamp(24px,2.6vw,32px); font-weight: 600; color: var(--text); margin-bottom: 10px; }
+.phSecondaryHead p { font-size: 15px; color: var(--text2); line-height: 1.7; }
+.phSecondaryLinks { display: flex; flex-direction: column; border-top: 1px solid var(--border); }
+.phSecondaryLink { display: flex; align-items: center; justify-content: space-between; padding: 22px 4px; border-bottom: 1px solid var(--border); transition: padding var(--ease), color var(--ease); }
+.phSecondaryName { font-family: var(--fd); font-size: 19px; font-weight: 600; color: var(--text); transition: color var(--ease); }
+.phSecondaryArrow { font-size: 20px; color: var(--text3); transition: transform var(--ease), color var(--ease); }
+.phSecondaryLink:hover { padding-left: 14px; }
+.phSecondaryLink:hover .phSecondaryName { color: var(--blueL); }
+.phSecondaryLink:hover .phSecondaryArrow { color: var(--blue); transform: translateX(6px); }
+
+/* 8. FINAL CTA */
+.phFinal { position: relative; padding: 120px 24px; text-align: center; background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%); border-top: 1px solid var(--border); overflow: hidden; }
+.phFinalGlow { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 720px; height: 360px; max-width: 110%; background: radial-gradient(ellipse, rgba(0,112,255,.16), transparent 68%); pointer-events: none; }
+.phFinalInner { position: relative; z-index: 1; }
+.phFinalH2 { font-family: var(--fd); font-size: clamp(38px,5.4vw,68px); font-weight: 700; line-height: 1.02; color: var(--white); margin-bottom: 20px; }
+.phFinal p { font-size: 18px; color: var(--text2); margin-bottom: 36px; }
+.phFinalBtn { padding: 17px 38px; font-size: 17px; }

@@ -29,7 +29,7 @@ Cloudflare aggressively caches JS and CSS files. When making changes to JS or CS
 
 **Current file versions:**
 - CSS: styles-v2.css
-- Components JS: components-v12.js (contains nav, footer, Ellie AI agent injection)
+- Components JS: components-v13.js (contains nav, footer, Ellie AI agent injection)
 - Calculator JS: calculator.js (savings calculator — do not modify unless asked)
 
 ## File Structure
@@ -45,7 +45,7 @@ APP-SITE/
 ├── css/
 │   └── styles-v2.css
 ├── js/
-│   ├── components-v12.js (nav + footer injection + Ellie AI agent)
+│   ├── components-v13.js (nav + footer injection + Ellie AI agent)
 │   └── calculator.js
 ├── index.html
 ├── restaurant.html
@@ -59,17 +59,17 @@ APP-SITE/
 └── sitemap.xml
 ```
 
-## Shared Components (components-v12.js)
+## Shared Components (components-v13.js)
 - **Nav** — injected via `injectNav(activePage)` at bottom of each HTML file
 - **Footer** — injected via `injectFooter()` at bottom of each HTML file
 - **Ellie AI Agent** — Jotform chatbot injected on all pages (agent ID: 019a849dc7117bdb8560faf980b1c548959d)
-- Any change to nav or footer must be made in components-v12.js, NOT in individual HTML files
+- Any change to nav or footer must be made in components-v13.js, NOT in individual HTML files
 - After any change to components JS, rename the file and update all HTML references
 
 ## HTML Page Structure
 Each page follows this pattern at the bottom:
 ```html
-<script src="/js/components-v12.js"></script>
+<script src="/js/components-v13.js"></script>
 <script src="/js/calculator.js"></script> <!-- index.html only -->
 <script>
 injectNav('/pagename.html');
