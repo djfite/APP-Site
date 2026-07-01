@@ -4,13 +4,14 @@ const LOGO_IMG = `<img src="/assets/app_logo.png" alt="APP Merchant Services log
 
 function injectNav(activePage) {
   const pages = [
-    { href: '/index.html',        label: 'Home' },
-    { href: '/restaurant.html',   label: 'Restaurants' },
-    { href: '/salon.html',        label: 'Salons' },
-    { href: '/dry-cleaner.html',  label: 'Dry Cleaners' },
-    { href: '/services.html',     label: 'More Services' },
-    { href: '/faq.html',          label: 'FAQ' },
-    { href: '/contact.html',      label: 'Get a Free Quote', cta: true },
+    { href: '/index.html',                              label: 'Home' },
+    { href: '/online-pharmacy-payment-processing.html', label: 'Online Pharmacy' },
+    { href: '/restaurant.html',                         label: 'Restaurants' },
+    { href: '/salon.html',                              label: 'Salons' },
+    { href: '/dry-cleaner.html',                        label: 'Dry Cleaners' },
+    { href: '/services.html',                           label: 'More Services' },
+    { href: '/faq.html',                                label: 'FAQ' },
+    { href: '/index.html#qualify',                      label: 'Check Your Eligibility', cta: true },
   ];
 
   const links = pages.map(p => {
@@ -47,11 +48,12 @@ function injectFooter() {
         <div class="footerTop">
           <div class="footerBrand">
             <a href="/index.html" class="navLogo">${LOGO_IMG}</a>
-            <p>Local payment processing and POS solutions for restaurants, salons, and dry cleaners in the Palm Coast area. Powered by bluu™.</p>
+            <p>Payment processing and POS solutions for online pharmacies, telehealth providers, and local businesses nationwide.</p>
           </div>
           <div class="footerCol">
             <h5>POS Solutions</h5>
             <ul>
+              <li><a href="/online-pharmacy-payment-processing.html">Online Pharmacy</a></li>
               <li><a href="/restaurant.html">Restaurant POS</a></li>
               <li><a href="/salon.html">Salon &amp; Spa POS</a></li>
               <li><a href="/dry-cleaner.html">Dry Cleaner POS</a></li>
@@ -65,7 +67,7 @@ function injectFooter() {
               <li><a href="/services.html">More Services</a></li>
               <li><a href="/faq.html">FAQ</a></li>
               <li><a href="/contact.html">Contact Us</a></li>
-              <li><a href="https://www.ebluu.com" target="_blank" rel="noopener">About bluu™</a></li>
+              <li><a href="/online-pharmacy-payment-processing.html">Online Pharmacy</a></li>
             </ul>
           </div>
           <div class="footerCol">
@@ -79,9 +81,8 @@ function injectFooter() {
           </div>
         </div>
         <div class="footerBottom">
-          <p class="footerLegal">© ${year} APP Merchant Services. Payment processing provided by <a href="https://www.ebluu.com" target="_blank" rel="noopener">bluu™</a>, a registered ISO/MSP of Merrick Bank, South Jordan, UT.</p>
+          <p class="footerLegal">© ${year} APP Merchant Services. All rights reserved.</p>
           <p style="font-size:12px;color:var(--text3);margin-top:8px"><a href="/privacy.html" style="color:var(--text3)">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms.html" style="color:var(--text3)">Terms &amp; Conditions</a></p>
-          <p style="font-size:12px;color:var(--text3);">Powered by <a href="https://www.ebluu.com" target="_blank" rel="noopener" style="color:var(--blueL);">bluu™</a></p>
         </div>
       </div>
     </footer>`);

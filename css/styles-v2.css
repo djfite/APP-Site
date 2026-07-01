@@ -5,6 +5,8 @@
    ================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+/* Homepage (DESIGN_BRIEF) — specialist fintech pairing, scoped to body.homepage */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 :root {
   --bg:       #070a12;
@@ -42,6 +44,7 @@ ul { list-style: none; }
 .navIn { max-width: var(--max); margin: 0 auto; padding: 0 24px; height: 100%; display: flex; align-items: center; justify-content: space-between; }
 .navLogo { display: flex; align-items: center; gap: 10px; }
 .navLogo svg { width: 34px; height: 34px; flex-shrink: 0; }
+.navLogo img { max-height: 52px; width: auto; }
 .navLogoText { font-family: var(--fd); font-size: 22px; font-weight: 700; letter-spacing: .08em; color: var(--white); }
 .navLogoText span { color: var(--blue); }
 .navLinks { display: flex; align-items: center; gap: 32px; }
@@ -95,13 +98,13 @@ ul { list-style: none; }
 .tItem svg { color: var(--blue); flex-shrink: 0; width: 15px; height: 15px; }
 
 /* SECTIONS */
-.sec { padding: 96px 24px; }
+.sec { padding: 112px 24px; }
 .secSm { padding: 64px 24px; }
 .wrap { max-width: var(--max); margin: 0 auto; }
 .centered { text-align: center; }
 .centered .sub { margin-left: auto; margin-right: auto; }
 .bgAlt { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.label { display: block; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--blue); margin-bottom: 12px; }
+.label { display: block; font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--blue); margin-bottom: 16px; }
 .h2 { font-family: var(--fd); font-size: clamp(32px,4vw,48px); font-weight: 700; line-height: 1.1; color: var(--white); margin-bottom: 16px; }
 .h2 .acc { color: var(--blue); }
 .sub { font-size: 17px; color: var(--text2); max-width: 560px; line-height: 1.7; margin-bottom: 48px; }
@@ -373,12 +376,12 @@ ul { list-style: none; }
 
 /* 1. HERO */
 .phHero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
-.phHeroBg { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: 0; }
+.phHeroBg { position: absolute; inset: 0; background-size: cover; background-position: 65% center; z-index: 0; }
 .phHeroVeil { position: absolute; inset: 0; z-index: 1; background:
-    linear-gradient(100deg, rgba(7,10,18,0.94) 0%, rgba(7,10,18,0.86) 38%, rgba(7,10,18,0.72) 100%); }
+    linear-gradient(to right, rgba(7, 10, 18, 0.95) 0%, rgba(7, 10, 18, 0.85) 45%, rgba(7, 10, 18, 0.25) 100%); }
 .phHeroVeil::after { content: ''; position: absolute; inset: 0; background:
     radial-gradient(ellipse 60% 50% at 18% 40%, rgba(0,112,255,0.12), transparent 70%); }
-.phHeroInner { position: relative; z-index: 2; max-width: var(--max); margin: 0 auto; width: 100%; padding: 0 24px; }
+.phHeroInner { position: relative; z-index: 2; max-width: 100%; margin: 0; width: 100%; padding: 0 24px 0 8%; }
 .phHeroCopy { max-width: 760px; width: 55%; padding: 160px 0 120px; }
 .phEyebrow { display: block; font-family: var(--fb); font-size: 13px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--blue); margin-bottom: 26px; }
 .phHeroH1 { font-family: var(--fd); font-size: clamp(46px,6.4vw,82px); font-weight: 700; line-height: 0.98; letter-spacing: -0.01em; color: var(--white); margin-bottom: 28px; }
@@ -395,7 +398,7 @@ ul { list-style: none; }
 .phPain { background: var(--bg); }
 .phPain .label { text-align: left; margin-bottom: 40px; }
 .phPainRow { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; margin-bottom: 64px; }
-.phQuote { position: relative; border-left: 3px solid var(--blue); padding: 6px 0 6px 26px; margin: 0; font-family: var(--fd); font-size: clamp(20px,2vw,25px); font-weight: 600; line-height: 1.28; color: var(--white); }
+.phQuote { position: relative; border-left: 3px solid var(--blue); padding: 6px 0 6px 26px; margin: 0; font-family: var(--fd); font-size: 22px; font-weight: 500; line-height: 1.32; color: var(--white); }
 .phQuote::before { content: '\201C'; position: absolute; left: 18px; top: -14px; font-size: 52px; line-height: 1; color: rgba(0,112,255,.22); font-family: Georgia, serif; pointer-events: none; }
 .phPainClose { max-width: 760px; margin: 0 auto; text-align: center; font-size: clamp(20px,2.4vw,28px); line-height: 1.5; font-weight: 500; color: var(--text2); }
 .phPainClose .acc { color: var(--white); }
@@ -403,7 +406,7 @@ ul { list-style: none; }
 
 /* 3. WHO WE SERVE */
 .phServe { display: grid; grid-template-columns: 1fr 1fr; background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.phServeCopy { display: flex; align-items: center; padding: 104px 64px 104px 0; }
+.phServeCopy { display: flex; align-items: center; padding: 112px 64px 112px 0; }
 .phServeCopyInner { max-width: 560px; margin-left: auto; padding: 0 24px; }
 .phServe .h2 { margin-bottom: 40px; }
 .phServeList { display: flex; flex-direction: column; gap: 32px; }
@@ -419,17 +422,11 @@ ul { list-style: none; }
   .phServeImg { min-height: 360px; order: -1; }
 }
 
-/* 4. WHY US — BLUE BAND */
-.phWhy { background: var(--blue); padding: 96px 24px; position: relative; overflow: hidden; }
-.phWhy::before { content: ''; position: absolute; top: -120px; right: -80px; width: 480px; height: 480px; background: radial-gradient(circle, rgba(255,255,255,.10), transparent 65%); pointer-events: none; }
-.phWhyHead { margin-bottom: 56px; }
-.phWhyKicker { display: block; font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.7); margin-bottom: 14px; }
+/* 4. WHY US — card grid (markup: .hpCardGrid, styled in HOMEPAGE FOUNDATION) */
+.phWhy { background: var(--bg); padding: 112px 24px; border-top: 2px solid var(--blue); }
+.phWhyHead { margin-bottom: 72px; }
+.phWhyKicker { display: block; font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--blue); margin-bottom: 16px; }
 .phWhyH2 { font-family: var(--fd); font-size: clamp(34px,4.4vw,54px); font-weight: 700; line-height: 1.05; color: var(--white); }
-.phWhyGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.16); border-radius: 16px; overflow: hidden; }
-.phWhyItem { background: var(--blue); padding: 40px 42px; }
-.phWhyItem h3 { font-family: var(--fd); font-size: 23px; font-weight: 700; color: var(--white); margin-bottom: 12px; }
-.phWhyItem p { font-size: 15px; line-height: 1.7; color: rgba(255,255,255,.88); }
-@media (max-width: 760px) { .phWhyGrid { grid-template-columns: 1fr; } .phWhyItem { padding: 32px 28px; } }
 
 /* 5. HOW IT WORKS */
 .phSteps { background: var(--bg); }
@@ -454,18 +451,76 @@ ul { list-style: none; }
 .phFormPulse { width: 38px; height: 38px; border-radius: 50%; border: 3px solid rgba(0,112,255,.2); border-top-color: var(--blue); animation: phSpin 0.9s linear infinite; }
 @keyframes phSpin { to { transform: rotate(360deg); } }
 
-/* 7. SECONDARY VERTICALS */
-.phSecondary { background: var(--bg); }
-.phSecondaryHead { max-width: 640px; margin-bottom: 36px; }
-.phSecondaryH2 { font-family: var(--fd); font-size: clamp(24px,2.6vw,32px); font-weight: 600; color: var(--text); margin-bottom: 10px; }
-.phSecondaryHead p { font-size: 15px; color: var(--text2); line-height: 1.7; }
-.phSecondaryLinks { display: flex; flex-direction: column; border-top: 1px solid var(--border); }
-.phSecondaryLink { display: flex; align-items: center; justify-content: space-between; padding: 22px 4px; border-bottom: 1px solid var(--border); transition: padding var(--ease), color var(--ease); }
-.phSecondaryName { font-family: var(--fd); font-size: 19px; font-weight: 600; color: var(--text); transition: color var(--ease); }
-.phSecondaryArrow { font-size: 20px; color: var(--text3); transition: transform var(--ease), color var(--ease); }
-.phSecondaryLink:hover { padding-left: 14px; }
-.phSecondaryLink:hover .phSecondaryName { color: var(--blueL); }
-.phSecondaryLink:hover .phSecondaryArrow { color: var(--blue); transform: translateX(6px); }
+/* 7. SECONDARY VERTICALS — DE-EMPHASIZED FOOTNOTE */
+.phSecondary { background: var(--bg); padding: 48px 24px; border-top: 1px solid rgba(255,255,255,0.08); }
+.phSecondaryHead { max-width: 620px; margin-bottom: 20px; }
+.phSecondaryH4 { font-family: var(--fd); font-size: 16px; font-weight: 600; letter-spacing: .02em; color: #8892a4; margin-bottom: 6px; }
+.phSecondaryHead p { font-size: 13px; color: var(--text3); line-height: 1.65; }
+.phSecondaryLinks { display: inline-flex; flex-wrap: wrap; gap: 32px; }
+.phSecondaryLink { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; color: #8892a4; transition: color var(--ease); }
+.phSecondaryArrow { font-size: 14px; color: var(--text3); transition: transform var(--ease), color var(--ease); }
+.phSecondaryLink:hover { color: var(--blueL); }
+.phSecondaryLink:hover .phSecondaryArrow { color: var(--blueL); transform: translateX(3px); }
+
+/* ================================================
+   ACCEPTED NETWORKS BAR (index.html)
+   ================================================ */
+.netBar { min-height: 80px; display: flex; align-items: center; background: #0a0d14; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 16px 40px; }
+.netBarIn { max-width: 1100px; margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 12px 0; }
+.netBarLabel { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); white-space: nowrap; margin-right: 24px; }
+.netBarDivider { width: 1px; height: 20px; background: rgba(255,255,255,0.12); align-self: center; }
+.netLogos { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; margin-left: 40px; }
+.network-logo { display: inline-flex; align-items: center; opacity: 0.55; transition: opacity 200ms ease; cursor: default; }
+.network-logo:hover { opacity: 0.8; }
+.network-logo svg { height: 24px; width: auto; display: block; }
+@media (max-width: 640px) { .netBarDivider { display: none; } .netLogos { gap: 28px; margin-left: 0; } .netBarLabel { margin-right: 0; width: 100%; text-align: center; } }
+
+/* ================================================
+   COMPLIANCE STAT BLOCK ("Sound Familiar?" section)
+   ================================================ */
+.compliance-stat-block { text-align: center; max-width: 680px; margin: 64px auto 0; padding: 48px; border: 1px solid rgba(0,112,255,0.2); border-radius: 8px; background: rgba(0,112,255,0.04); }
+.stat-number { font-family: var(--fd); font-size: 72px; font-weight: 800; color: #fff; line-height: 1; margin-bottom: 16px; }
+.stat-context { font-size: 15px; color: #8892a4; line-height: 1.7; margin-bottom: 28px; }
+.stat-cta { display: inline-block; font-size: 13px; font-weight: 600; color: #0070ff; text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; border-bottom: 1px solid rgba(0,112,255,0.4); padding-bottom: 2px; transition: color var(--ease), border-color var(--ease); }
+.stat-cta:hover { color: #fff; border-color: #fff; }
+@media (max-width: 600px) { .compliance-stat-block { padding: 32px 24px; } .stat-number { font-size: 56px; } }
+
+/* ================================================
+   SCROLL & LOAD ANIMATIONS (index.html)
+   Hidden/initial states are gated behind html.anim-ready
+   (added by js/animations.js). If JS is disabled or fails,
+   the class is never added and all content stays visible.
+   ================================================ */
+
+body { overflow-x: hidden; }
+
+/* Hero headline lines stack so each can animate independently */
+.phHeroH1 .heroLine { display: block; }
+
+/* ANIMATION 1 — hero load stagger */
+.heroAnim { transition: opacity 700ms cubic-bezier(0.25,0.46,0.45,0.94), transform 700ms cubic-bezier(0.25,0.46,0.45,0.94); }
+html.anim-ready .heroAnim { opacity: 0; transform: translateY(40px); }
+html.anim-ready .heroAnim.is-visible { opacity: 1; transform: translateY(0); }
+
+/* ANIMATION 3 — section reveal on scroll */
+[data-animate] { transition: opacity 600ms ease, transform 600ms ease; }
+html.anim-ready [data-animate] { opacity: 0; transform: translateY(30px); }
+html.anim-ready [data-animate].section-visible { opacity: 1; transform: translateY(0); }
+
+/* ANIMATION 4 — quote stagger ("Sound Familiar?") */
+.quoteAnim { transition: opacity 500ms ease-out, transform 500ms ease-out; }
+html.anim-ready .quoteAnim { opacity: 0; transform: translateX(-20px); }
+html.anim-ready .quoteAnim.is-visible { opacity: 1; transform: translateX(0); }
+
+/* ANIMATION 6 — "Who We Serve" list stagger */
+.serveAnim { transition: opacity 450ms ease-out, transform 450ms ease-out; }
+html.anim-ready .serveAnim { opacity: 0; transform: translateX(-15px); }
+html.anim-ready .serveAnim.is-visible { opacity: 1; transform: translateX(0); }
+
+/* Respect the user's reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
 
 /* 8. FINAL CTA */
 .phFinal { position: relative; padding: 120px 24px; text-align: center; background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%); border-top: 1px solid var(--border); overflow: hidden; }
@@ -474,3 +529,334 @@ ul { list-style: none; }
 .phFinalH2 { font-family: var(--fd); font-size: clamp(38px,5.4vw,68px); font-weight: 700; line-height: 1.02; color: var(--white); margin-bottom: 20px; }
 .phFinal p { font-size: 18px; color: var(--text2); margin-bottom: 36px; }
 .phFinalBtn { padding: 17px 38px; font-size: 17px; }
+
+/* ================================================================
+   HOMEPAGE FOUNDATION  —  DESIGN_BRIEF Phase 1
+   Specialist-fintech redesign of index.html (Stripe/Ramp register).
+   Everything here is scoped to body.homepage so the other 9 pages
+   are untouched. Tokens are redefined on .homepage; because CSS
+   custom properties cascade, existing var(--fd/--bg/--text2/…)
+   references on homepage elements pick up the new values.
+   ================================================================ */
+
+/* ---- Design tokens (homepage scope) ---- */
+.homepage {
+  /* Warm dark base — not pure black (brief §2) */
+  --bg:      #0A0D14;   /* base background            */
+  --bg2:     #12151C;   /* section alternation / cards */
+  --bg3:     #161A22;   /* raised surface             */
+  --bg4:     #1B2029;   /* hover / highest surface    */
+  --border:  rgba(255,255,255,0.06);
+  --borderH: rgba(255,255,255,0.12);   /* card hover border */
+  /* Text hierarchy (brief §2) */
+  --text:    #FFFFFF;                  /* headlines        */
+  --text2:   #8892A4;                  /* body copy        */
+  --text3:   rgba(255,255,255,0.35);   /* fine print       */
+  /* Type (brief §3) — accent --blue is inherited unchanged */
+  --fd:      'Space Grotesk', sans-serif;   /* display */
+  --fb:      'Inter', sans-serif;           /* body    */
+  /* Structure */
+  --hp-radius: 16px;
+  --hp-radius-sm: 10px;
+  background: var(--bg);
+}
+
+/* Insulate injected shared chrome so nav/footer stay identical to
+   the other 9 pages (original tokens re-asserted, not new ones). */
+.homepage .nav, .homepage .footer {
+  --bg: #070a12; --bg2: #0c1120; --bg3: #111827; --bg4: #162035;
+  --border: rgba(255,255,255,0.07);
+  --text: #f0f4ff; --text2: #8a99b8; --text3: #4a5568;
+  --fd: 'Rajdhani', sans-serif; --fb: 'DM Sans', sans-serif;
+}
+
+/* ---- Type scale (brief §3) ---- */
+/* Numerals: tabular figures for all data/stat elements */
+.homepage .stat-number,
+.homepage .phStepNum,
+.homepage .phHeroH1 { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+
+/* Hero H1 — 64–80px, weight 600, tight leading */
+.homepage .phHeroH1 { font-weight: 600; font-size: clamp(40px, 6vw, 80px); line-height: 1.06; letter-spacing: -0.02em; }
+.homepage .phEyebrow { font-family: var(--fb); font-size: 11px; font-weight: 600; letter-spacing: 0.12em; }
+.homepage .phHeroSub { font-family: var(--fb); font-weight: 400; font-size: 18px; line-height: 1.6; color: var(--text2); }
+
+/* Section H2 — 40–48px, weight 600 */
+.homepage .h2,
+.homepage .phWhyH2 { font-weight: 600; font-size: clamp(34px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.015em; }
+.homepage .phFinalH2 { font-weight: 600; letter-spacing: -0.015em; }
+
+/* Eyebrow labels — 11px, weight 600, 0.12em, blue */
+.homepage .label,
+.homepage .phWhyKicker { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; }
+
+/* Stat numbers — weight 700, tabular */
+.homepage .stat-number { font-weight: 700; }
+
+/* ---- Card system (brief §4) ---- */
+/* Asymmetric 12-col bento: wide (7) + narrow (5), alternating —
+   deliberately not a rigid 2×2. Collapses to 1 column on mobile. */
+.homepage .hpCardGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.homepage .hpCard--wide   { grid-column: span 7; }
+.homepage .hpCard--narrow { grid-column: span 5; }
+
+.homepage .hpCard {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  padding: 32px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--hp-radius);
+  overflow: hidden;
+  transition: border-color var(--ease), background var(--ease), transform var(--ease);
+}
+.homepage .hpCard:hover {
+  border-color: var(--borderH);
+  background: var(--bg3);
+  transform: translateY(-2px);
+}
+.homepage .hpCardBody { flex: 0 0 auto; }
+.homepage .hpCardIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  margin-bottom: 20px;
+  border-radius: var(--hp-radius-sm);
+  background: rgba(0,112,255,0.10);
+  border: 1px solid rgba(0,112,255,0.22);
+  color: var(--blue);
+}
+.homepage .hpCardIcon svg { width: 20px; height: 20px; }
+.homepage .hpCardTitle { font-family: var(--fd); font-size: 21px; font-weight: 600; line-height: 1.2; color: var(--text); margin-bottom: 10px; letter-spacing: -0.01em; }
+.homepage .hpCardText { font-family: var(--fb); font-size: 15px; font-weight: 400; line-height: 1.6; color: var(--text2); max-width: 46ch; }
+
+/* Contained visual/animation area (brief §4 & §5).
+   Phase 1 renders a quiet static state keyed by data-viz;
+   Phase 2/3 replace the inner content with the live components. */
+.homepage .hpCardVisual {
+  flex: 1 1 auto;
+  margin-top: 24px;
+  min-height: 76px;
+  border-radius: var(--hp-radius-sm);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.02), transparent),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 22px);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: var(--hp-radius-sm) var(--hp-radius-sm) 0 0;
+  align-self: stretch;
+  position: relative;
+}
+/* Not-yet-built placeholder rails (cards without a live visual) sit at the
+   card bottom at a fixed height instead of stretching to fill a tall row.
+   TODO(Phase 4): replace these with Concept C / trust visuals. */
+.homepage .hpCardVisual:not(.hpCardVisual--live):not(.hpCardVisual--map):not(.hpCardVisual--specialist):not(.hpCardVisual--checklist) {
+  flex: 0 0 auto;
+  margin-top: auto;
+}
+.homepage .hpCardVisual::after {
+  content: '';
+  position: absolute;
+  left: 20px; bottom: 0;
+  width: 44px; height: 2px;
+  background: var(--blue);
+  box-shadow: 0 0 12px rgba(0,112,255,0.5);
+}
+
+@media (max-width: 860px) {
+  .homepage .hpCardGrid { grid-template-columns: 1fr; }
+  .homepage .hpCard--wide,
+  .homepage .hpCard--narrow { grid-column: 1 / -1; }
+  .homepage .hpCard { min-height: 0; }
+}
+/* ================= END HOMEPAGE FOUNDATION ================= */
+
+/* ================================================================
+   LIVE TRANSACTION CARD  —  DESIGN_BRIEF Concept B (Phase 2)
+   Ramp-style incoming-order feed inside the "Card-Not-Present" card.
+   A pharmacy order toast slides in, processes, then settles — looping
+   only while in viewport (driven by initLiveTransactionCard() in
+   animations.js). Hidden states are gated behind html.anim-ready, so
+   the static / reduced-motion fallback is a single settled "Processed"
+   order that never disappears. Green is used strictly as status data.
+   ================================================================ */
+.homepage .hpCardVisual--live { background: none; border: none; border-radius: 0; min-height: 96px; display: flex; }
+.homepage .hpCardVisual--live::after { display: none; }
+
+.ltx { --ltx-green: #46D48A; width: 100%; display: flex; flex-direction: column; justify-content: flex-end; gap: 12px; }
+
+/* Feed header + live status dot */
+.ltxFeed { display: flex; align-items: center; gap: 8px; }
+.ltxDot { width: 7px; height: 7px; border-radius: 50%; background: var(--ltx-green); box-shadow: 0 0 0 0 rgba(70,212,138,.5); animation: ltxPulse 2.4s ease-out infinite; }
+.ltxFeedLabel { font-family: var(--fb); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--text3); }
+
+/* The order toast (the animated element) */
+.ltxRow {
+  display: flex; align-items: center; gap: 12px;
+  padding: 11px 13px;
+  background: var(--bg4);
+  border: 1px solid var(--borderH);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  transition: opacity 320ms cubic-bezier(.22,.61,.36,1), transform 320ms cubic-bezier(.22,.61,.36,1);
+  will-change: opacity, transform;
+}
+/* Row rests VISIBLE — this is also the static / no-JS / reduced-motion state,
+   so the card never shows an empty feed. To advance to the next order JS adds
+   .is-swap: the tile dips to a faint state, content is swapped at the low point,
+   then it settles back. It never fully disappears, so there is no empty gap. */
+html.anim-ready .ltxRow.is-swap { opacity: .15; transform: translateY(-5px); transition-duration: 180ms; transition-timing-function: cubic-bezier(.4,0,.2,1); }
+
+.ltxRx { flex: 0 0 auto; width: 32px; height: 32px; border-radius: 9px; display: flex; align-items: center; justify-content: center; background: rgba(0,112,255,.12); border: 1px solid rgba(0,112,255,.24); color: var(--blueL); }
+.ltxRx svg { width: 16px; height: 16px; }
+.ltxInfo { display: flex; flex-direction: column; min-width: 0; gap: 2px; margin-right: auto; }
+.ltxLabel { font-family: var(--fb); font-size: 10.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--text3); }
+.ltxRxName { font-family: var(--fb); font-size: 13px; font-weight: 500; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ltxRight { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; flex: 0 0 auto; }
+.ltxAmt { font-family: var(--fd); font-size: 14px; font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+
+/* Status chip: Processing (blue) -> Processed (green). Fixed width = no jitter. */
+.ltxState { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-width: 90px; font-family: var(--fb); font-size: 11px; font-weight: 600; line-height: 1; padding: 4px 8px; border-radius: 100px; }
+.ltxState.is-processing { color: var(--blueL); background: rgba(0,112,255,.10); }
+.ltxState.is-processed  { color: var(--ltx-green); background: rgba(70,212,138,.12); animation: ltxPop 340ms cubic-bezier(.34,1.56,.64,1); }
+.ltxStateTxt { letter-spacing: .01em; }
+.ltxCheck { width: 12px; height: 12px; flex: 0 0 auto; }
+
+/* Processing indicator dots */
+.ltxDots { display: inline-flex; align-items: center; gap: 3px; }
+.ltxDots span { width: 4px; height: 4px; border-radius: 50%; background: currentColor; opacity: .4; animation: ltxDots 1s ease-in-out infinite; }
+.ltxDots span:nth-child(2) { animation-delay: .16s; }
+.ltxDots span:nth-child(3) { animation-delay: .32s; }
+
+@keyframes ltxPulse { 0% { box-shadow: 0 0 0 0 rgba(70,212,138,.5); } 70% { box-shadow: 0 0 0 7px rgba(70,212,138,0); } 100% { box-shadow: 0 0 0 0 rgba(70,212,138,0); } }
+@keyframes ltxPop { 0% { transform: scale(.86); opacity: .4; } 100% { transform: scale(1); opacity: 1; } }
+@keyframes ltxDots { 0%, 100% { opacity: .3; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-1px); } }
+/* ================= END LIVE TRANSACTION CARD ================= */
+
+/* ================================================================
+   PAYMENT JOURNEY CARD  —  DESIGN_BRIEF Concept A (Phase 3)
+   In the "Bank-Sponsored Stability" card: a faint US map where a pulse
+   departs the Patient node (west), draws the arc as it crosses the
+   country to the Pharmacy node (east), which pings and confirms a green
+   "Payment settled" check — then softly resets. ~4s loop, driven only in
+   view by initPaymentJourneyCard() (adds .pj-run). Base state = the
+   settled frame (arc drawn, check + status shown), so static / no-JS /
+   reduced-motion never looks broken. Green is used only as settle status.
+   ================================================================ */
+.homepage .hpCardVisual--map { background: none; border: none; border-radius: 0; min-height: 0; margin-top: 32px; display: flex; }
+.homepage .hpCardVisual--map::after { display: none; }
+.pj { width: 100%; display: flex; flex-direction: column; }
+.pjSvg { width: 100%; height: auto; max-height: 260px; display: block; overflow: visible; }
+
+/* Map silhouette (faint landmass + crisp coastline) */
+.pjMap path { fill: rgba(0,112,255,0.09); stroke: rgba(0,112,255,0.30); stroke-width: 1; vector-effect: non-scaling-stroke; }
+
+/* Coast-to-coast arc (drawn as the pulse travels) */
+.pjArc { fill: none; stroke: var(--blue); stroke-width: 2.5; stroke-linecap: round; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 0; opacity: .85; filter: drop-shadow(0 0 3px rgba(0,112,255,.55)); }
+
+/* Endpoint nodes */
+.pjHalo { fill: rgba(0,112,255,0.16); }
+.pjCore { fill: var(--blue); }
+.pjNodeA .pjCore { fill: #dbe6fb; }
+.pjPing { fill: none; stroke: var(--blue); stroke-width: 2; vector-effect: non-scaling-stroke; opacity: 0; transform-box: fill-box; transform-origin: center; }
+
+/* Settle check badge on the pharmacy node */
+.pjCheck { transform-box: fill-box; transform-origin: center; }
+.pjCheckBg { fill: #0A0D14; stroke: #46D48A; stroke-width: 2; vector-effect: non-scaling-stroke; }
+.pjCheckMark { fill: none; stroke: #46D48A; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+
+/* Travelling pulse */
+/* offset-path is set per cycle by initPaymentJourneyCard() (6 rotating origins) */
+.pjNodeInner { transform-box: fill-box; transform-origin: center; }
+.pjPulse, .pjPulseGlow { offset-rotate: 0deg; opacity: 0; }
+.pjPulse { fill: #eaf1ff; }
+.pjPulseGlow { fill: rgba(0,112,255,0.55); filter: blur(4px); }
+
+/* Map labels */
+.pjLabel { fill: var(--text2); font-family: var(--fb); font-size: 30px; font-weight: 500; letter-spacing: .01em; text-anchor: middle; }
+
+/* Settle status chip (below the map) */
+.pjStatus { display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; margin-top: 8px; padding: 5px 11px; border-radius: 100px; background: rgba(70,212,138,0.12); color: #46D48A; font-family: var(--fb); font-size: 12px; font-weight: 600; }
+.pjStatusCheck { width: 13px; height: 13px; flex: 0 0 auto; }
+
+/* ---- Motion ----
+   One journey = one .pj-go cycle. JS repositions the origin (6 rotating
+   cities), then removes+re-adds .pj-go to replay this 4s sequence. Every
+   element fades out by 100% so the origin can be moved off-screen between
+   cycles. `both` holds the faded-out end until the next cycle restarts. */
+.hpCardVisual--map.pj-go .pjArc { animation: pjDraw 4s linear both; }
+.hpCardVisual--map.pj-go .pjPulse,
+.hpCardVisual--map.pj-go .pjPulseGlow { animation: pjTravel 4s ease-in-out both; }
+.hpCardVisual--map.pj-go .pjNodeB .pjPing { animation: pjPing 4s ease-out both; }
+.hpCardVisual--map.pj-go .pjCheck { animation: pjCheck 4s ease-out both; }
+.hpCardVisual--map.pj-go .pjStatus { animation: pjStatusIn 4s ease-out both; }
+.hpCardVisual--map.pj-go .pjNodeA .pjNodeInner { animation: pjOrigin 4s ease-out both; }
+.hpCardVisual--map.pj-go .pjLabelA { animation: pjLabelFade 4s ease-out both; }
+
+@keyframes pjOrigin { 0% { opacity: 0; transform: scale(.3); } 8% { opacity: 1; transform: scale(1); } 88% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(.9); } }
+@keyframes pjLabelFade { 0% { opacity: 0; } 12% { opacity: 1; } 88% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes pjDraw { 0% { stroke-dashoffset: 1; opacity: 0; } 5% { opacity: .85; } 8% { stroke-dashoffset: 1; } 60% { stroke-dashoffset: 0; } 88% { stroke-dashoffset: 0; opacity: .85; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+@keyframes pjTravel { 0% { offset-distance: 0%; opacity: 0; } 6% { opacity: 1; } 10% { offset-distance: 0%; } 60% { offset-distance: 100%; } 66% { opacity: 1; } 72% { offset-distance: 100%; opacity: 0; } 100% { offset-distance: 100%; opacity: 0; } }
+@keyframes pjPing { 0%, 58% { transform: scale(.5); opacity: 0; } 62% { opacity: .7; } 82% { transform: scale(2.6); opacity: 0; } 100% { opacity: 0; } }
+@keyframes pjCheck { 0%, 60% { transform: scale(0); opacity: 0; } 68% { transform: scale(1.18); opacity: 1; } 74% { transform: scale(1); } 90% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes pjStatusIn { 0%, 58% { opacity: 0; transform: translateY(5px); } 70% { opacity: 1; transform: translateY(0); } 90% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes pjBreathe { 0%, 100% { opacity: .8; } 50% { opacity: 1; } }
+/* ================= END PAYMENT JOURNEY CARD ================= */
+
+/* ================================================================
+   SPECIALIST CARD  —  Phase 4 revision (static)
+   In "Same-Day Response": a real specialist, not a ticket queue.
+   Static by design (no motion) — a stock call-center photo + status.
+   Photo lives at /assets/specialist.jpg; a neutral fallback shows if
+   the file is absent so nothing looks broken.
+   ================================================================ */
+.homepage .hpCardVisual--specialist { background: none; border: none; border-radius: 0; align-items: center; }
+.homepage .hpCardVisual--specialist::after { display: none; }
+.sp { display: flex; align-items: center; gap: 16px; width: 100%; max-width: 360px; margin: 0 auto; padding: 16px; background: var(--bg3); border: 1px solid var(--borderH); border-radius: 14px; box-shadow: 0 16px 40px rgba(0,0,0,.42); }
+.spPhoto { flex: 0 0 auto; width: 76px; height: 76px; border-radius: 50%; background-color: var(--bg4); background-size: cover; background-position: center top; border: 1px solid var(--border); box-shadow: 0 0 0 4px rgba(0,112,255,.10); }
+.spInfo { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.spName { font-family: var(--fd); font-size: 17px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
+.spRole { font-family: var(--fb); font-size: 12.5px; font-weight: 400; color: var(--text2); }
+.spStatus { display: inline-flex; align-items: center; gap: 7px; margin-top: 6px; font-family: var(--fb); font-size: 12px; font-weight: 600; color: #46D48A; }
+.spDot { width: 7px; height: 7px; border-radius: 50%; background: #46D48A; box-shadow: 0 0 0 3px rgba(70,212,138,.15); flex: 0 0 auto; }
+/* ================= END SPECIALIST CARD ================= */
+
+/* ================================================================
+   COMPLIANCE CHECKLIST  —  Phase 4 revision (animated)
+   In "Compliance-Forward Underwriting": the credentials reveal one at
+   a time and each checkbox lights up green (initComplianceChecklist),
+   drawing attention to the fact that we understand each requirement.
+   Loops while in view. Base/static/reduced-motion = all four shown lit.
+   ================================================================ */
+.homepage .hpCardVisual--checklist { background: none; border: none; border-radius: 0; }
+.homepage .hpCardVisual--checklist::after { display: none; }
+.ck { display: flex; flex-direction: column; gap: 13px; width: 100%; }
+.ckItem { display: flex; align-items: center; gap: 11px; font-family: var(--fb); font-size: 14px; font-weight: 500; color: var(--text); transition: opacity .5s ease, transform .5s ease; }
+.ckMark { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 6px; background: rgba(70,212,138,.14); border: 1px solid rgba(70,212,138,.32); color: #46D48A; transition: background .4s ease, border-color .4s ease, color .4s ease; }
+.ckMark svg { width: 13px; height: 13px; }
+/* Hidden/dim initial state, only when JS-driven animation is active */
+html.anim-ready .hpCardVisual--checklist .ckItem { opacity: 0; transform: translateX(-10px); }
+html.anim-ready .hpCardVisual--checklist .ckMark { background: rgba(255,255,255,.04); border-color: rgba(255,255,255,.10); color: transparent; }
+html.anim-ready .hpCardVisual--checklist .ckItem.is-in { opacity: 1; transform: none; }
+/* Second beat: the box lights up green a moment after its line appears. */
+html.anim-ready .hpCardVisual--checklist .ckItem.is-lit .ckMark { background: rgba(70,212,138,.14); border-color: rgba(70,212,138,.32); color: #46D48A; animation: ckPop 420ms cubic-bezier(.34,1.56,.64,1); }
+@keyframes ckPop { 0% { transform: scale(.55); } 60% { transform: scale(1.12); } 100% { transform: scale(1); } }
+/* ================= END COMPLIANCE CHECKLIST ================= */
+
+/* ================================================================
+   TRUST-BAR STAGGER  —  DESIGN_BRIEF Concept D (Phase 4)
+   Accepted-network logos slide/fade in 100ms apart on scroll-in
+   (delays set by initTrustBar). Resting opacity stays the current .55.
+   ================================================================ */
+.netBar .network-logo { transition: opacity 500ms ease, transform 500ms ease; }
+html.anim-ready .netBar .network-logo { opacity: 0; transform: translateY(10px); }
+html.anim-ready .netBar .network-logo.is-in { opacity: .55; transform: none; }
+/* ================= END TRUST-BAR STAGGER ================= */
