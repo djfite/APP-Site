@@ -1,6 +1,6 @@
 /* APP Merchant Services — Shared Components */
 
-const LOGO_IMG = `<img src="/assets/app_logo.png" alt="APP Merchant Services logo" style="height:64px;width:auto;border-radius:6px;display:block;"/>`;
+const LOGO_IMG = `<img src="/assets/app-logo-lockup.svg" onerror="this.onerror=null;this.src='/assets/app-logo-lockup-2x.png'" alt="APP Merchant Services — Cleared to process" style="height:36px;width:auto;display:block;"/>`;
 
 function injectNav(activePage) {
   const pages = [
@@ -48,7 +48,7 @@ function injectFooter() {
         <div class="footerTop">
           <div class="footerBrand">
             <a href="/index.html" class="navLogo">${LOGO_IMG}</a>
-            <p>Payment processing and POS solutions for online pharmacies, telehealth providers, and local businesses nationwide.</p>
+            <p>Bank-sponsored merchant accounts for high-risk healthcare commerce. Cleared to process.</p>
           </div>
           <div class="footerCol">
             <h5>POS Solutions</h5>
