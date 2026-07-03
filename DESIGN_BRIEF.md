@@ -159,3 +159,22 @@ Before considering this redesign complete, verify against each of these:
 - Restaurant/Salon/Dry Cleaner pages — unchanged for now
 - Jotform embed styling — placeholder remains until Prompt D
 - Full font migration site-wide — homepage only for this pass; decide later whether to propagate Space Grotesk/Inter everywhere
+
+---
+
+## 11. Addenda — Conventions (added 2026-07-03)
+
+> Note: the site has since moved to the navy/green/white **light** system (Schibsted Grotesk / Hanken Grotesk / JetBrains Mono). The decisions below are theme-agnostic conventions that apply going forward.
+
+### 11.1 Sticky nav — semi-transparency + blur (intentional)
+The sticky nav is deliberately **semi-transparent**, not solid:
+- Background at **~90% opacity** (`rgba(255,255,255,0.9)` on the current light theme).
+- `backdrop-filter: blur(8px)` (with `-webkit-backdrop-filter` for Safari).
+- Goal: as the user scrolls, page content is **subtly visible through the nav** — a modern, layered feel. This is a design choice, not a bug; do not "fix" it back to a solid bar.
+- **Constraint:** whenever the nav sits over a dark contrast block (e.g., the dark navy hero or final CTA), verify text/logo contrast still holds against the darker backdrop showing through at 90%. On the current theme the navy logo/links and green tagline pass comfortably; re-check if the opacity is ever lowered further or the nav palette changes.
+
+### 11.2 "Container preserved, content disabled" — promo banner pattern
+When a time-limited promo (e.g., a seasonal POS bundle) ends, **disable it, don't delete it**:
+- Keep the banner's injection logic + markup in place, wrapped in a `/*  */` block comment (JS-comment, since the banner markup contains characters like an em-dash that break HTML comments).
+- Leave a clear note stating it's disabled, the offer that expired, and exactly how to re-enable (remove the comment wrapper, then swap the offer copy: headline, price, inclusions, deadline, unit count).
+- This keeps a known-good, styled container ready for the next promotion instead of rebuilding it each cycle. Treat this as the standard pattern for all future limited-time offers.

@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/styles-v2.css?v=8"/>
+<link rel="stylesheet" href="/css/styles-v2.css?v=9"/>
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"/>
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"/>
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png"/>
@@ -431,9 +431,12 @@ c-12 19 -17 38 -14 55 8 36 -26 57 -90 56 -28 0 -61 5 -74 12 -22 12 -23 14
       <h2 class="h2">Check Your Eligibility</h2>
       <p class="sub" style="margin-left:auto;margin-right:auto;text-align:center">Answer a few quick questions to find out if your pharmacy qualifies for processing. No commitment required.</p>
     </div>
+    <!-- PLACEHOLDER SHELL FORM: Jotform 261836765002053 currently collects Name / Email / Phone only.
+         Replace / expand with the full pharmacy pre-qualification form (conditional + branching logic:
+         website, business type, monthly volume, LegitScript status, etc.) once that is built. -->
     <div class="phFormShell" id="jotform-embed-placeholder">
-      <div class="phFormPulse"></div>
-      <p>Pre-qualification form loading&hellip;</p>
+      <p class="phFormIntro">Tell us a bit about your pharmacy &mdash; we&rsquo;ll follow up to confirm eligibility.</p>
+      <script type="text/javascript" src="https://form.jotform.com/jsform/261836765002053"></script>
     </div>
   </div>
 </section>
@@ -463,7 +466,7 @@ c-12 19 -17 38 -14 55 8 36 -26 57 -90 56 -28 0 -61 5 -74 12 -22 12 -23 14
   </div>
 </section>
 
-<script src="/js/components-v16.js"></script>
+<script src="/js/components-v17.js"></script>
 <script>
 injectNav('/index.html');
 injectFooter();

@@ -4,7 +4,6 @@ const LOGO_IMG = `<img src="/assets/app-logo-lockup.svg" onerror="this.onerror=n
 
 function injectNav(activePage) {
   const pages = [
-    { href: '/index.html',                              label: 'Home' },
     { href: '/online-pharmacy-payment-processing.html', label: 'Online Pharmacy' },
     { href: '/restaurant.html',                         label: 'Restaurants' },
     { href: '/salon.html',                              label: 'Salons' },
