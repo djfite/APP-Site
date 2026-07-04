@@ -56,7 +56,6 @@ function injectFooter() {
               <li><a href="/restaurant.html">Restaurant POS</a></li>
               <li><a href="/salon.html">Salon &amp; Spa POS</a></li>
               <li><a href="/dry-cleaner.html">Dry Cleaner POS</a></li>
-              <li><a href="/index.html#calculator">Savings Calculator</a></li>
             </ul>
           </div>
           <div class="footerCol">
@@ -93,10 +92,4 @@ function initFadeIn() {
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.fi').forEach(el => obs.observe(el));
 }
-// Ellie AI Agent - Jotform Chatbot
-(function() {
-  var script = document.createElement('script');
-  script.src = 'https://cdn.jotfor.ms/agent/embedjs/019a849dc7117bdb8560faf980b1c548959d/embed.js';
-  document.body.appendChild(script);
-})();
 document.addEventListener('DOMContentLoaded', initFadeIn);

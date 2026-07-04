@@ -28,8 +28,8 @@ Static HTML/CSS/JS website for APP Merchant Services, a local payment processing
 Cloudflare aggressively caches JS and CSS files. When making changes to JS or CSS files, you MUST rename the file to force a cache bust. Example: components-v12.js → components-v13.js. Then update ALL HTML files to reference the new filename using find & replace.
 
 **Current file versions:**
-- CSS: styles-v2.css (referenced with a `?v=` query cache-buster; currently `?v=9`)
-- Components JS: components-v17.js (contains nav, footer, Ellie AI agent injection)
+- CSS: styles-v2.css (referenced with a `?v=` query cache-buster; currently `?v=10`)
+- Components JS: components-v18.js (contains nav + footer injection)
 - Calculator JS: calculator.js (savings calculator — do not modify unless asked). As of 2026-07-03 it is embedded on restaurant.html, salon.html, and dry-cleaner.html only (see Recent Changes).
 
 ## File Structure
@@ -45,7 +45,7 @@ APP-SITE/
 ├── css/
 │   └── styles-v2.css
 ├── js/
-│   ├── components-v17.js (nav + footer injection + Ellie AI agent)
+│   ├── components-v18.js (nav + footer injection)
 │   └── calculator.js
 ├── index.html
 ├── restaurant.html
@@ -59,17 +59,16 @@ APP-SITE/
 └── sitemap.xml
 ```
 
-## Shared Components (components-v17.js)
+## Shared Components (components-v18.js)
 - **Nav** — injected via `injectNav(activePage)` at bottom of each HTML file
 - **Footer** — injected via `injectFooter()` at bottom of each HTML file
-- **Ellie AI Agent** — Jotform chatbot injected on all pages (agent ID: 019a849dc7117bdb8560faf980b1c548959d)
-- Any change to nav or footer must be made in components-v17.js, NOT in individual HTML files
+- Any change to nav or footer must be made in components-v18.js, NOT in individual HTML files
 - After any change to components JS, rename the file and update all HTML references
 
 ## HTML Page Structure
 Each page follows this pattern at the bottom:
 ```html
-<script src="/js/components-v17.js"></script>
+<script src="/js/components-v18.js"></script>
 <script>
 injectNav('/pagename.html');
 injectFooter();
@@ -114,7 +113,15 @@ The promo banner container/logic is **preserved (commented out, not deleted)** i
 
 ## Facebook
 - Page: https://www.facebook.com/profile.php?id=61568587052713
-- Ellie AI agent connected to Facebook Messenger
+- Ellie AI chatbot removed from the website 2026-07-04 (see Recent Changes). Any Jotform↔Messenger integration is managed in Jotform, not in site code.
+
+## Recent Changes (2026-07-04)
+Work on the `pharmacy-redesign` branch (uncommitted at time of writing):
+- **Built `online-pharmacy-payment-processing.html`** — full SEO/credibility page (hero, problem, who-we-work-with, compliance stack, 4-step underwriting, differentiators, FAQ with FAQPage JSON-LD, dark final-CTA with the embedded eligibility Jotform `261836765002053`, jsform, no SRI). Reuses existing `styles-v2.css` classes + the homepage step-counter in `animations.js`; page-specific rules live in a page-local `<style>` block (scoped `.opp`, not in the shared stylesheet). "Compounding pharmacies" as a vertical and the "underwrite in parallel while certification pends" claim were intentionally held out of the live page pending confirmation. The nav/footer "Online Pharmacy" links already pointed here.
+- **Ellie AI chatbot removed site-wide** (decision made 2026-07-04). The widget was a single self-contained IIFE at the bottom of the components JS, loaded on every page; deleted there. Also scrubbed the Ellie references from the legal pages: removed Terms §5 "AI Chat Assistant (Ellie)" (renumbered §6–§13 → §5–§12) and the Ellie mentions in Terms §4 and Privacy §1/§2/§4. (No literal "update Ellie's branding" pending item existed in this doc; the decision is recorded here instead.)
+- **Footer: removed the "Savings Calculator" link** from the POS Solutions column — the calculator no longer has one canonical home (it lives further down restaurant/salon/dry-cleaner pages, which are already linked in that column).
+- **Footer contact column width fix** — the email `derek@appmerchantservices.com` was wrapping under its envelope icon. Rebalanced `.footerTop` grid `1.5fr 1fr 1fr 1fr → 1.3fr 1fr 1fr 1.5fr` and added `white-space: nowrap` to `.footerCol ul li a` so the email sits inline with its icon.
+- **Cache-buster bumps** (forced by the shared-file edits above): components JS **v17 → v18** (rename + all 10 HTML references updated); CSS **`?v=9` → `?v=10`** across all 10 HTML files.
 
 ## Recent Changes (2026-07-03)
 Work on the `pharmacy-redesign` branch (uncommitted at time of writing):
@@ -135,7 +142,7 @@ Work on the `pharmacy-redesign` branch (uncommitted at time of writing):
 - **Doc drift:** the "Brand Design Tokens" and font sections below still describe the pre-rebrand dark theme (Rajdhani/DM Sans, #070a12/#0070ff). The site is now the navy/green/white light system (Schibsted Grotesk / Hanken Grotesk / JetBrains Mono) — these sections should be refreshed in a follow-up (not done today to stay scoped).
 - **Pending:**
   - **Check Your Eligibility form** — currently a placeholder Jotform embed (`261836765002053`, shell fields Name/Email/Phone only) on index.html `#qualify`. Full pre-qualification form with branching logic (website, business type, monthly volume, LegitScript status, etc.) still to be built, then swap the embed / expand the form.
-  - online-pharmacy-payment-processing.html not yet created.
+  - online-pharmacy-payment-processing.html — built 2026-07-04 (see Recent Changes). Its final-CTA section still uses the placeholder eligibility Jotform (shell fields only); swap when the full pre-qualification form is built.
   - faq.html calculator reference (`restaurant.html#calculator`) is a placeholder pending a decision.
   - Note: the eligibility Jotform (`261836765002053`) is separate from the Contact page Jotform (`243268921130048`).
 

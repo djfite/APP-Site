@@ -264,11 +264,11 @@ ul { list-style: none; }
 /* FOOTER */
 .footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 64px 24px 32px; }
 .footerIn { max-width: var(--max); margin: 0 auto; }
-.footerTop { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+.footerTop { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.5fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
 .footerBrand p { font-size: 14px; color: var(--text2); line-height: 1.7; margin-top: 16px; max-width: 260px; }
 .footerCol h5 { font-family: var(--fd); font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text2); margin-bottom: 16px; }
 .footerCol ul { display: flex; flex-direction: column; gap: 10px; }
-.footerCol ul li a { font-size: 14px; color: var(--text2); transition: color var(--ease); }
+.footerCol ul li a { font-size: 14px; color: var(--text2); transition: color var(--ease); white-space: nowrap; }
 .footerCol ul li a:hover { color: var(--text); }
 .footerBottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
 .footerLegal { font-size: 12px; color: var(--text3); line-height: 1.6; }
