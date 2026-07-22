@@ -107,7 +107,7 @@ The promo banner container/logic is **preserved (commented out, not deleted)** i
 ## Analytics & SEO
 - GA4 ID: G-3RPGTJ7M12
 - Search Console verified: 3FqCoqqjQXs2pN8ZtHvuU_JeC_UwtO3WohIwuxlKrgw
-- Sitemap: submitted, 7 pages indexed
+- Sitemap: submitted, 10 pages listed (online-pharmacy-payment-processing, privacy, terms added 2026-07-22 — resubmit in Search Console to re-index)
 - Local Business Schema: added to all 7 pages
 - Google Business Profile: verified, live
 
