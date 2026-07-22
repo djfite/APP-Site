@@ -114,6 +114,12 @@ The promo banner container/logic is **preserved (commented out, not deleted)** i
 ## Facebook
 - Page: https://www.facebook.com/profile.php?id=61568587052713
 - Ellie AI chatbot removed from the website 2026-07-04 (see Recent Changes). Any Jotform↔Messenger integration is managed in Jotform, not in site code.
+- **Messenger bot — removal decided (2026-07-22).** Matching the Ellie removal, the Facebook Messenger bot is being retired (not a priority channel for pharmacy/telehealth outreach). **This is an EXTERNAL action item, not a code task:** it must be turned off on Facebook's side (Page settings / Meta Business Suite) — there is nothing to change in this repo.
+
+## Recent Changes (2026-07-22)
+Work on the `pharmacy-redesign` branch:
+- **Eligibility form built out — no longer a placeholder.** The homepage "Check Your Eligibility" Jotform (`261836765002053`, `#qualify` on index.html) now carries the full pharmacy pre-qualification form with real qualifying fields: business type, states served, licensing status, LegitScript status, controlled substances, dispensing model, recurring billing, reason for inquiry, and processing volume. The same dynamic `jsform` ID is embedded on `online-pharmacy-payment-processing.html`'s final CTA, so it picked up the full form automatically — no per-page swap needed. The placeholder note in the index.html embed comment was updated to match. (Removed from the Pending list below.)
+- **Facebook Messenger bot — removal decided** (see Facebook section). External action item on Facebook's side (Page settings / Meta Business Suite), not a code change.
 
 ## Recent Changes (2026-07-04)
 Work on the `pharmacy-redesign` branch (uncommitted at time of writing):
@@ -141,8 +147,8 @@ Work on the `pharmacy-redesign` branch (uncommitted at time of writing):
 - **(Resolved 2026-07-03)** The old "promo banner appears behind the sticky nav" issue is moot — the banner is disabled. If a future banner is re-enabled, it is injected after the nav with `margin-top` to clear the fixed nav (do NOT use `position:fixed` on it; it should scroll with the page but sit below the nav). Nav height is ~68px.
 - **Doc drift:** the "Brand Design Tokens" and font sections below still describe the pre-rebrand dark theme (Rajdhani/DM Sans, #070a12/#0070ff). The site is now the navy/green/white light system (Schibsted Grotesk / Hanken Grotesk / JetBrains Mono) — these sections should be refreshed in a follow-up (not done today to stay scoped).
 - **Pending:**
-  - **Check Your Eligibility form** — currently a placeholder Jotform embed (`261836765002053`, shell fields Name/Email/Phone only) on index.html `#qualify`. Full pre-qualification form with branching logic (website, business type, monthly volume, LegitScript status, etc.) still to be built, then swap the embed / expand the form.
-  - online-pharmacy-payment-processing.html — built 2026-07-04 (see Recent Changes). Its final-CTA section still uses the placeholder eligibility Jotform (shell fields only); swap when the full pre-qualification form is built.
+  - **Check Your Eligibility form — DONE (2026-07-22).** The full pharmacy pre-qualification form is built and live on both index.html `#qualify` and the online-pharmacy page's final CTA (same `261836765002053` embed). See Recent Changes (2026-07-22). No swap outstanding.
+  - **Messenger bot removal — EXTERNAL action item (not code).** Turn off the Facebook Messenger bot on Facebook's side (Page settings / Meta Business Suite); decision recorded in the Facebook section. Matches the Ellie removal.
   - faq.html calculator reference (`restaurant.html#calculator`) is a placeholder pending a decision.
   - Note: the eligibility Jotform (`261836765002053`) is separate from the Contact page Jotform (`243268921130048`).
 
