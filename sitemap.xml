@@ -8,6 +8,9 @@
   <url><loc>https://appmerchantservices.com/services.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://appmerchantservices.com/faq.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://appmerchantservices.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://appmerchantservices.com/blog/index.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://appmerchantservices.com/blog/pharmacy-payment-account-shutdowns.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://appmerchantservices.com/blog/online-pharmacy-underwriting-checklist.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://appmerchantservices.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://appmerchantservices.com/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

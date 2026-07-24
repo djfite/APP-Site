@@ -66,6 +66,7 @@ function injectFooter() {
               <li><a href="/faq.html">FAQ</a></li>
               <li><a href="/contact.html">Contact Us</a></li>
               <li><a href="/online-pharmacy-payment-processing.html">Online Pharmacy</a></li>
+              <li><a href="/blog/index.html">Blog</a></li>
             </ul>
           </div>
           <div class="footerCol">
